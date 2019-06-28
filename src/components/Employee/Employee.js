@@ -10,7 +10,7 @@ class Employee extends React.Component {
   render() {
     const { employee } = this.props;
     return (
-      <div className="Employee col-4">
+      <div className="Employee">
         <div className="card">
           <img className="card-img-top employeePic" src={employee.imgUrl} alt="employee!"/>
           <div className="card-body">
