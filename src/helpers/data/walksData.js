@@ -3,6 +3,9 @@ import firebaseConfig from '../apiKeys.json';
 
 const baseUrl = firebaseConfig.firebaseKeys.databaseURL;
 
+
+const addNewWalk = newWalk => axios.post(`${baseUrl}/walks.json`, newWalk);
+
 const getWalks = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/walks.json`)
     .then((res) => {
@@ -16,4 +19,4 @@ const getWalks = () => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-export default { getWalks };
+export default { getWalks, addNewWalk };
